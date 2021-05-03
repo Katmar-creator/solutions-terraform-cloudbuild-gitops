@@ -22,6 +22,7 @@ resource "google_bigtable_instance" "production-instance" {
     my-label = "prod-label"
   }
 }
+
 resource "google_service_account" "default" {
   account_id   = "service-account-id"
   display_name = "Service Account"
