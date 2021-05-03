@@ -7,9 +7,9 @@
 #     https://www.apache.org/licenses/LICENSE-2.0
 #
 resource "google_bigtable_instance" "production-instance" {
-  name = "tf-instance"
+  name                = "tf-instance"
   deletion_protection = "false"
-  project = "${var.project}"
+  project             = var.project
 
   cluster {
     cluster_id   = "tf-instance-cluster"
@@ -26,14 +26,14 @@ resource "google_bigtable_instance" "production-instance" {
 resource "google_service_account" "default" {
   account_id   = "service-account-id"
   display_name = "Service Account"
-  project = "${var.project}"
+  project      = var.project
 }
 
 resource "google_compute_instance" "default" {
   name         = "test"
   machine_type = "e2-medium"
   zone         = "europe-west1-b"
-  project = "${var.project}"
+  project      = var.project
 
   boot_disk {
     initialize_params {
@@ -54,3 +54,4 @@ resource "google_compute_instance" "default" {
     scopes = ["cloud-platform"]
   }
 }
+
