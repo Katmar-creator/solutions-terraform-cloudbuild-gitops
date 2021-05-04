@@ -53,5 +53,12 @@ resource "google_compute_instance" "default" {
     email  = "google-service-account-default@katmar-21.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
+
+  module "vpc" {
+  source  = "../../modules/vpc"
+  project = "${var.project}"
+  env     = "${local.env}"
+}
+
 }
 
