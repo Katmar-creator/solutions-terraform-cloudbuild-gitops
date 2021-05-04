@@ -91,6 +91,14 @@ steps:
       fi
 # [END tf-apply]      
 
--id: ''
-name: 'gcr.io/cloud-builders/docker'
-args: [ 'build', '-t', 'gcr.io/katmar-21/quickstart-image:docker', '.' ]
+# [START docker build]
+- id: 'docker build'
+  name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/katmar-21/quickstart-image:docker', '.']
+# [END docker build] 
+
+# [START docker push]
+- id: 'docker push'
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/katmar-21/quickstart-image:docker' ]
+# [END docker push] 
