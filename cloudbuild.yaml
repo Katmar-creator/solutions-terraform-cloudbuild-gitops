@@ -90,3 +90,7 @@ steps:
         echo "*******************************************************************************"
       fi
 # [END tf-apply]      
+
+-id: ''
+name: 'gcr.io/cloud-builders/docker'
+args: [ 'build', '-t', 'gcr.io/katmar-21/quickstart-image:docker', '.' ]
