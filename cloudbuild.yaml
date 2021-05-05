@@ -100,7 +100,7 @@ steps:
 # [test]
 - id: 'test'
   name: 'gcr.io/cloud-builders/docker'
-  args: [ 'image list']
+  args: [ 'image', 'list']
 # [test]
 
 # [START docker run]
