@@ -106,5 +106,5 @@ steps:
 # [START docker run]
 - id: 'docker run'
   name: 'gcr.io/cloud-builders/docker'
-  args: [ 'run', '-t', 'docker-hello-world:latest', '.']
+  args: [ 'run', 'us-central1-docker.pkg.dev/katmar-21/docker-repo/docker-hello-world']
 # [END docker run]
