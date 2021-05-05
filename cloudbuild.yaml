@@ -91,6 +91,12 @@ steps:
       fi
 # [END tf-apply]      
 
+# [START docker pull]
+- id: 'docker pull'
+  name: 'gcr.io/cloud-builders/docker'
+  args: [ 'pull', 'us-central1-docker.pkg.dev/katmar-21/docker-repo/docker-hello-world:latest']
+# [END docker pull]
+
 # [START docker run]
 - id: 'docker run'
   name: 'gcr.io/cloud-builders/docker'
