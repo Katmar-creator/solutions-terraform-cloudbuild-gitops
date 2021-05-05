@@ -94,5 +94,5 @@ steps:
 # [START docker run]
 - id: 'docker run'
   name: 'gcr.io/cloud-builders/docker'
-  args: [ 'run', '-t', 'docker-hello-world:1.0-SNAPSHOT', '.']
+  args: [ 'run', '-t', 'docker-hello-world:latest', '.']
 # [END docker run]
