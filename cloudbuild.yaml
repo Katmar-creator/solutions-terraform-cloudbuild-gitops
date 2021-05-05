@@ -91,14 +91,8 @@ steps:
       fi
 # [END tf-apply]      
 
-# [START docker build]
-- id: 'docker build'
+# [START docker run]
+- id: 'docker run'
   name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/katmar-21/quickstart-image:docker', '.']
-# [END docker build] 
-
-# [START docker push]
-- id: 'docker push'
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/katmar-21/quickstart-image:docker' ]
-# [END docker push] 
+  args: [ 'run', '-t', 'docker-hello-world:1.0-SNAPSHOT', '.']
+# [END docker run]
