@@ -106,5 +106,5 @@ steps:
 # [START docker run]
 - id: 'docker run'
   name: 'gcr.io/cloud-builders/docker'
-  args: [ 'run', '-e', 'GOOGLE_APPLICATION_CREDENTIALS=/home/katarzyna_s_marciniak/solutions-terraform-cloudbuild-gitops/katmar-21-6e0904609b50.json' 'us-central1-docker.pkg.dev/katmar-21/docker-repo/docker-hello-world']
+  args: [ 'run', '-e', 'GOOGLE_APPLICATION_CREDENTIALS=/home/katarzyna_s_marciniak/solutions-terraform-cloudbuild-gitops/katmar-21-6e0904609b50.json', 'us-central1-docker.pkg.dev/katmar-21/docker-repo/docker-hello-world']
 # [END docker run]
