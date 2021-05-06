@@ -97,6 +97,12 @@ steps:
   args: [ 'pull', 'us-central1-docker.pkg.dev/katmar-21/docker-repo/docker-hello-world:latest']
 # [END docker pull]
 
+# [START docker build]
+- id: 'docker build'
+  name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'docker-hello-world:1.0-SNAPSHOT', '.']
+# [END docker build]
+
 # [test]
 - id: 'test'
   name: 'gcr.io/cloud-builders/docker'
